@@ -60,7 +60,17 @@ function App() {
     }
 
     const signupHandler = () => {
-        fetch(`${url}/signup/${email}/${password}/${name}`)
+        fetch(`${url}/signup`, {
+            body: JSON.stringify({
+                username: email,
+                password: password,
+                name: name
+            }),
+            method: 'POST',
+            headers:{
+                'content-type': 'application/json'
+            }
+        })
             .then(res=>res.json())
             .then(profile=>{
                 setLoggedIn(true);
