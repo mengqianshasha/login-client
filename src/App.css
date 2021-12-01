@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+body, #root{
+  height: fit-content;
+  min-height: 100vh
+}
+
+.min-height-100vh{
+  min-height: 100vh;
+}
+
+.test-container{
+  padding-left: 40%;
+  padding-right: 40%;
+}
