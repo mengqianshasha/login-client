@@ -14,7 +14,9 @@ function App() {
     const [password, setPassword] = useState('');
 
     const initLogInStatus = () => {
-            fetch('http://localhost:4000/check-login-status')
+            fetch('http://localhost:4000/check-login-status', {
+                credentials: 'include'
+            })
                 .then(res=>res.json())
                 .then(response=> {
                     if (Object.keys(response).length === 0) {
@@ -39,7 +41,9 @@ function App() {
     }
 
     const clickLoginHandler = () => {
-        fetch(`${url}/login/${email}/${password}`)
+        fetch(`${url}/login/${email}/${password}`, {
+            credentials: 'include'
+        })
             .then(res=>res.json())
             .then(response=>{
                 if (JSON.stringify(response)!=='{}') {
@@ -52,7 +56,9 @@ function App() {
     }
 
     const logoutHandler = () => {
-        fetch(`${url}/logout`)
+        fetch(`${url}/logout`, {
+            credentials: 'include'
+        })
             .then(res=>{
                 setLoggedIn(false);
                 setMyName('');
@@ -69,7 +75,8 @@ function App() {
             method: 'POST',
             headers:{
                 'content-type': 'application/json'
-            }
+            },
+            credentials: 'include'
         })
             .then(res=>res.json())
             .then(profile=>{
