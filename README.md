@@ -56,17 +56,17 @@ The project leverages [Yelp Fusion API](https://fusion.yelp.com/)
 
 #### 3 user roles
 * **Anonymous user**
-  - Search restaurants
-  - See details of a restaurant: open time, address, map, menu...
-  - See reviews of a restaurant left by other users
-  - See profiles of other users
-  - See generic recent activities
+    - Search restaurants
+    - See details of a restaurant: open time, address, map, menu...
+    - See reviews of a restaurant left by other users
+    - See profiles of other users
+    - See generic recent activities
 1. **Customer user**
-  - Search restaurants
-  - CRUD his/her reviews for a restaurant
-  - Own a private profile which displays the user's activities
-  - Get notification reminders
-  - Browse activities of nearby restaurant and the user's followings
+    - Search restaurants
+    - CRUD his/her reviews for a restaurant
+    - Own a private profile which displays the user's activities
+    - Get notification reminders
+    - Browse activities of nearby restaurant and the user's followings
 2. **Business owner**
   - Claim a business
   - Reply reviews from customers
