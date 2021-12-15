@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# Fast Foodie
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br />
+<br />
 
-## Available Scripts
+## About the project
+This is a React application for fast-foodie project.
 
-In the project directory, you can run:
+![project image](https://i.postimg.cc/zzdFj8QP/Screen-Shot-2021-12-14-at-7-21-31-PM.png)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Project basic functionalities
+- Login, register
+- Search restaurant
+- CRUD reviews
+- View profile
+- Dynamic contents: 
+  - Notifications
+  - Activities
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+#### Server end
+Please see the server end of this application on [Github](https://github.com/mengqianshasha/fast-foodie-server)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+#### Built with
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- FontAwesome
+- React
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Remote Api
+The project leverages [Yelp Fusion API](https://fusion.yelp.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Getting Started
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Pages
+- Home
+- Search
+- Detail
+- Profile: public/private
+- Login
+- Register
+- Business claim
+- Privacy policy
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### 3 user roles
+* **Anonymous user**
+  - Search restaurants
+  - See details of a restaurant: open time, address, map, menu...
+  - See reviews of a restaurant left by other users
+  - See profiles of other users
+  - See generic recent activities
+1. **Customer user**
+  - Search restaurants
+  - CRUD his/her reviews for a restaurant
+  - Own a private profile which displays the user's activities
+  - Get notification reminders
+  - Browse activities of nearby restaurant and the user's followings
+2. **Business owner**
+  - Claim a business
+  - Reply reviews from customers
+3. **Admin**
+  - Verify business owner's authentication, and accordingly accept or decline his/her claim request.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Data models
+- Domain object models
+  - Follow
+  - Review
+  - Claim
+  - Activity
+  - Notification
+  - Restaurant
+- User models
+  - Customer
+  - BusinessOwner
+  - Admin
+ 
+ 
+#### Data model relations
+- One to one
+  - BusinessOwner and Restaurant (claim)
+- One to many
+  - User and Notification/Activity
+  - Restaurant and BusinessOwner
+  - Admin and BusinessOwner
+- Many to many
+  - Customer and Customer (follow)
+  - Customer and Restaurant (review)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+#### Contributors
+- Qiansha Meng
+- Ying Fang
+- Zihan Wang
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Hope you like this content :thumbsup:
